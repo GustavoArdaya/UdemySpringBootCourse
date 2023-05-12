@@ -3,7 +3,10 @@ package com.udemycourse.springBootCourse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(
+		scanBasePackages = {	"com.example.util",
+								"com.udemycourse.springBootCourse.IoCandDI"}
+)
 public class SpringBootCourseApplication {
 
 	public static void main(String[] args) {

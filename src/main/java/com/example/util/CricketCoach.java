@@ -1,4 +1,4 @@
-package com.udemycourse.springBootCourse.IoCandDI;
+package com.example.util;
 
 import org.springframework.stereotype.Component;
 
