@@ -1,4 +1,4 @@
-package com.example.util;
+package com.udemycourse.springBootCourse.IoCandDI.common;
 
 public interface Coach {
 

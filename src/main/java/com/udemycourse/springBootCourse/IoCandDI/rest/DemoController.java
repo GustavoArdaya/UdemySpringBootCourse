@@ -1,6 +1,6 @@
 package com.udemycourse.springBootCourse.IoCandDI.rest;
 
-import com.example.util.Coach;
+import com.udemycourse.springBootCourse.IoCandDI.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
