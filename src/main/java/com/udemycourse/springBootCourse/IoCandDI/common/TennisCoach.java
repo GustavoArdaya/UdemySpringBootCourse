@@ -1,8 +1,10 @@
 package com.udemycourse.springBootCourse.IoCandDI.common;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
+@Lazy // will only initialize class if needed
 public class TennisCoach implements Coach{
 
     public TennisCoach() {
