@@ -10,11 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     private Coach myCoach;
+    private Coach anotherCoach;
 
 // Example of constructor injection:
     @Autowired  // Tells Spring to inject a dependency. Annotation is optional if you only have one constructor
-    public DemoController(@Qualifier("baseballCoach") Coach theCoach) { // with @Qualifier annotation I specify which coach to use
+    public DemoController(
+            @Qualifier("baseballCoach") Coach theCoach,
+            @Qualifier("baseballCoach") Coach theAnotherCoach ) { // with @Qualifier annotation I specify which coach to use
         myCoach = theCoach;                                             // note that the name is same as class, but beginning with lower case
+        anotherCoach = theAnotherCoach;
     }                                                                   // You can skip this by @Primary annotation in classes. Qualifier has higher priority
 
     // Setter injection: // uses setMethod instead of constructor
@@ -28,5 +32,10 @@ public class DemoController {
     @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
         return myCoach.getDailyWorkout();
+    }
+
+    @GetMapping("/checkscope")
+    public String checkScope() {
+        return "Comparing beans: myCoach == anotherCoach, " + (myCoach == anotherCoach) + " \nIf singleton, it will return true. If not, it's creating new instances of the class (Prototype)";
     }
 }
