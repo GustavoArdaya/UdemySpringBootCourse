@@ -20,7 +20,7 @@ public class BaseballCoach implements Coach{
         System.out.println("This code executes during " + getClass().getSimpleName() + " initialization");
     }
 
-    @PreDestroy
+    @PreDestroy // will not be called if scope is set to prototype!
     public void atDestroy() {
         System.out.println("This code executes during " + getClass().getSimpleName() + " destruction");
     }

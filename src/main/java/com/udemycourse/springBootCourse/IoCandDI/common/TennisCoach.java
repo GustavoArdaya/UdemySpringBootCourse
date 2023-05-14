@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
-@Lazy // will only initialize class if needed
+@Lazy // will only initialize class if needed. Prototype beans are lazy by default
 public class TennisCoach implements Coach{
 
     public TennisCoach() {

@@ -15,7 +15,7 @@ public class DemoController {
 // Example of constructor injection:
     @Autowired  // Tells Spring to inject a dependency. Annotation is optional if you only have one constructor
     public DemoController(
-            @Qualifier("baseballCoach") Coach theCoach,
+            @Qualifier("swimCoach") Coach theCoach,
             @Qualifier("baseballCoach") Coach theAnotherCoach ) { // with @Qualifier annotation I specify which coach to use
         myCoach = theCoach;                                             // note that the name is same as class, but beginning with lower case
         anotherCoach = theAnotherCoach;
